@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td>BMI:</td>
-            <td><?php echo $bmi; ?></td>
+            <td><?php echo number_format(bmi($berat, $tinggi),2); ?></td>
         </tr>
     </table>
 </body>
@@ -34,6 +34,6 @@
 
 <?php
 function bmi($berat, $tinggi){
-    $totalbmi = $berat / $tinggi*2;
-    return 0;
+    $bmi = $berat / ($tinggi * 2);
+    return $bmi;
 }
